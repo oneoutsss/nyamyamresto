@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran Nyam-Nyam</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="slider.js"></script>
+    <style>
+        body {
+            font-family: 'Font1', system-ui;
+            margin: 0;
+            padding: 0;
+            color: rgb(71, 83, 76);
+            display: flex;
+            flex-direction: column;
+            min-height: 90vh;
+            background-image: url('https://pin.it/3uFfDes');
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-image: url('https://ru.freepik.com/free-vector/ramen-soup-on-blue-background_9979167.htm');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+            padding: 5rem;
+        }
+
+        nav {
+            background-color: hwb(337 25% 67%);
+            color: #f5f5f5;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: center;
+        }
+
+        .slider-container {
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider {
+            display: flex;
+            width: 500%; /* Jumlah bagian x 100% untuk membuat efek slide */
+            transition: transform 0.5s ease;
+        }
+
+        section {
+            flex: 0 0 100%; /* Setiap bagian memakan 100% lebar container */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .menu-item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .menu-item div {
+            margin: 10px;
+            flex: 0 0 calc(33.333% - 20px); /* Masing-masing item memakan 1/3 dari lebar container, dengan jarak 20px */
+        }
+
+        .menu-item img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .review {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .contact img {
+            width: 100px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu-makanan">Makanan</a>
+        <a href="#menu-minuman">Minuman</a>
+        <a href="#review">Review</a>
+        <a href="#kontak">Lokasi & Kontak</a>
+    </nav>
+
+    <div class="slider-container">
+        <div class="slider">
+            <section id="home">
+                <br><h2>Selamat datang di Restoran Nyam-Nyam</h2>
+                <br><p>Restoran Nyam-Nyam adalah tempat yang sempurna untuk menikmati hidangan lezat dan suasana 
+                    yang menyenangkan</p>
+                    <p>Nikmati berbagai pilihan menu makanan dan minuman kami yang lezat dan berkualitas tinggi.</p>
+            </section>
+
+            <section id="menu-makanan">
+                <h2>Makanan</h2>
+                <div class="menu-item">
+                    <div>
+                        <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\seblak-is-sundanese-savoury-spicy-dish-originating-from-sundanese-region-west-java_464898-918.avif" alt="Makanan 1">
+                        <p>Seblak</p>
+                        <p>Harga: Rp15.000</p>
+                    </div>
+                    <div>
+                        <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\WhatsApp Image 2023-12-31 at 14.36.51_5f219c89.jpg" alt="Makanan 2">
+                        <p>Nasi Goreng</p>
+                        <p>Harga: Rp13.000</p>
+                    </div>
+                    <div>
+                        <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\WhatsApp Image 2023-12-31 at 16.36.10_3d1eff5d.jpg" alt="Makanan 3">
+                        <p>Nasi Uduk</p>
+                        <p>Harga: Rp13.000</p>
+                    </div>
+                    <div>
+                        <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\WhatsApp Image 2023-12-31 at 16.18.23_a0a3ff47.jpg" alt="Makanan 4">
+                        <p>Ayam Bakar</p>
+                        <p>Harga: Rp19.000</p>
+                    </div>
+                    <div>
+                        <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\WhatsApp Image 2023-12-31 at 16.19.29_b6b80376.jpg" alt="Makanan 5">
+                        <p>Sate Usus</p>
+                        <p>Harga: Rp20.000</p>
+                    </div>
+                    <div>
+                        <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\WhatsApp Image 2023-12-31 at 16.18.21_0045e876.jpg" alt="Makanan 6">
+                        <p>Ramen</p>
+                        <p>Harga: Rp25.000</p>
+                    </div>
+                </div>
+            </section>
+        
+            <section id="menu-minuman">
+                <h2>Minuman</h2>
+                <div class="menu-item">
+                    <div>
+                        <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\WhatsApp Image 2023-12-31 at 14.34.53_f3f4f204.jpg" alt="Minuman 1">
+                        <p>Es Teh</p>
+                        <p>Harga: Rp4.000</p>
+                    </div>
+                    <div>
+                        <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\WhatsApp Image 2023-12-31 at 14.38.08_488f586d.jpg" alt="Minuman 2">
+                        <p>Kopi Susu</p>
+                        <p>Harga: Rp8.000</p>
+                    </div>
+                    <div>
+                        <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\WhatsApp Image 2023-12-31 at 14.08.32_7d942998.jpg" alt="Minuman3">
+                        <p>Millo</p>
+                        <p>Harga: Rp5.000</p>
+                    </div>
+                    <div>
+                        <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\WhatsApp Image 2023-12-31 at 14.08.31_32339c58.jpg" alt="Minuman4">
+                        <p>Es Jeruk</p>
+                        <p>Harga: Rp5.000</p>
+                    </div>
+                    <div>
+                        <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\WhatsApp Image 2023-12-31 at 14.47.06_74e000df.jpg" alt="Minuman5">
+                        <p>Bobba Latte</p>
+                        <p>Harga: Rp13.000</p>
+                    </div>
+                    <div>
+                        <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\WhatsApp Image 2023-12-31 at 16.30.38_0e717280.jpg" alt="Minuman6">
+                        <p>Matcha Latte</p>
+                        <p>Harga: Rp10.000</p>
+                    </div>
+                </div>
+            </section>
+        
+            <section id="review">
+                <h2>Review</h2>
+                <div class="review">
+                    <div class="review-item">
+                        <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\WhatsApp Image 2023-12-31 at 16.49.13_ce3064bc.jpg" alt="Review 1">
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                        <p class="comment">"Porsinya banyak banget,mantap!!"</p>
+                    </div>
+                    <div class="review">
+                        <div class="review-item">
+                            <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\WhatsApp Image 2023-12-31 at 16.49.03_402e44b3.jpg" alt="Review 1">
+                            <p class="rating">⭐⭐⭐⭐⭐</p>
+                            <p class="comment">"Rasanya enak,bikin nagih:)"</p>
+                        </div>
+                        <div class="review">
+                            <div class="review-item">
+                                <img src="c:\Users\Hp\Documents\Foto design proyek tekweb\WhatsApp Image 2023-12-31 at 16.52.04_e457219a.jpg" alt="Review 1">
+                                <p class="rating">⭐⭐⭐⭐⭐</p>
+                                <p class="comment">"enak banget"</p>
+                            </div>
+                    
+            </section>
+        
+            <section id="kontak">
+                <h2>Lokasi & Kontak</h2>
+                <div class="contact">
+                    <a href="https://maps.app.goo.gl/mt6haoLTtA1fxQrN6?g_st=ic" target="_blank">Lihat Peta Lokasi</a>>
+                    <p>Nomor Telepon: (085770094199)</p>
+                    <p>Email: info@nyamnyam.com</p>
+                    <p>Alamat: Jl.your heart No. 15, Kota Yogyakarta, Indonesia</p>
+                    <a href="halaman_reservasi.html" class="button">Pesan Sekarang</a>
+                </div>
+    </section>
+            </section>
+        
+    <footer>
+        <p>&copy; 2023 Restoran Nyam-Nyam. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script src="slider.js"></script>
+</body>
+</html>
